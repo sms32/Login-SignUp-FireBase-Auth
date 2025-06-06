@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 🔐 Vite React Firebase Auth PWA
 
 A modern Progressive Web App (PWA) built with **Vite + React + Firebase Authentication**. This project includes login, signup, and installable PWA support — perfect for scalable, fast-loading apps with authentication.
@@ -35,16 +34,16 @@ A modern Progressive Web App (PWA) built with **Vite + React + Firebase Authenti
 
 ### 📁 Clone the repository
 
-\`\`\`bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
-\`\`\`
+```bash
+git clone https://github.com/sms32/Login-SignUp-FireBase-Auth.git
+cd Login-SignUp-FireBase-Auth
+```
 
 ### 🛠️ Install dependencies
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ---
 
@@ -60,11 +59,11 @@ npm install
 
 In your project, create a file:
 
-\`\`\`
+```
 src/firebase.js
-\`\`\`
+```
 
-\`\`\`js
+```js
 // src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
@@ -80,17 +79,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-\`\`\`
-
-✅ Make sure you don’t commit secrets — add \`firebase.js\` to \`.gitignore\` if needed.
+```
 
 ---
 
 ## 💡 Run the App Locally
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Open your browser at [http://localhost:5173](http://localhost:5173)
 
@@ -114,17 +111,27 @@ Open your browser at [http://localhost:5173](http://localhost:5173)
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 src/
-├── assets/          # Images, icons
-├── components/      # Shared components (Navbar, etc.)
-├── pages/           # Login, Signup, Home
-├── firebase.js      # Firebase init + auth
-├── App.jsx          # Main app component
-├── main.jsx         # ReactDOM + Router setup
-├── service-worker.js# PWA service worker
-└── index.css        # Styles
-\`\`\`
+├── components/
+│ ├── InstallButton.jsx
+│ ├── Login.jsx
+│ ├── LogoutButton.jsx
+│ ├── ProtectedRoute.jsx
+│ ├── Signup.jsx
+│ └── Spinner.jsx
+├── contexts/
+│ └── AuthContext.jsx
+├── pages/
+│ └── Home.jsx
+├── style/ # Global or scoped styles (CSS/SCSS)
+│ └── Login.css
+├── App.jsx # Main routing and structure
+├── firebase.ts # Firebase config and initialization
+├── index.css # Base styles
+├── InstallPrompt.jsx # PWA install banner component
+└── main.jsx # ReactDOM + AuthContext + Router setup
+```
 
 ---
 
@@ -134,29 +141,19 @@ You can deploy the app using:
 
 ### 📤 Firebase Hosting
 
-\`\`\`bash
+```bash
 npm run build
 firebase login
 firebase init hosting
 firebase deploy
-\`\`\`
+```
 
 ---
 
-## ✅ To-Do / Improvements
-
-- [ ] Form validation and error handling
-- [ ] Password reset feature
-- [ ] Role-based routing (admin/user)
-- [ ] Firestore integration for storing user data
-- [ ] Push notifications (via FCM)
-- [ ] Unit tests with Vitest / Jest
-
----
 
 ## 📄 License
 
-MIT License. Free to use and modify.
+Free to use and modify.
 
 ---
 
