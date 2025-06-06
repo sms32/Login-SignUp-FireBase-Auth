@@ -165,5 +165,4 @@ Pull requests and suggestions are welcome! Please open an issue for major change
 
 ## 🧑‍💻 Author
 
-Built with ❤️ by [Your Name](https://github.com/YOUR_USERNAME)
-EOF
+Built by [SAM MICHAEL S](https://github.com/sms32)
